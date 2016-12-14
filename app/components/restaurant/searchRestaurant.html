@@ -1,0 +1,35 @@
+<div ng-controller="searchRestaurantController">
+    <div class="header" style="margin-bottom:0px">
+        <div class="navbar navbar-default" role="navigation" style="margin-bottom:0px">
+            <div class="container-fluid">
+                <div class="row" style="padding-top:16px;padding-bottom:16px">
+                    <div class="col-md-4">
+                        <input id="pac-input" class="form-control" type="text"  placeholder="Search Box" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div ng-show="showResult">
+<div class="restaurants col-md-4" style="overflow:scroll;max-height:600px">
+
+    <div class="row col-md-12">
+        <div class="restaurant-panel" ng-repeat="val in restaurants">
+           {{val.restaurant.name}}<br/>
+            Rating : {{val.restaurant.user_rating.aggregate_rating}}<br/>
+            Cost for two : ₹ {{val.restaurant.average_cost_for_two}}<br/>
+            Cuisines : {{val.restaurant.cuisines}}
+            <div class="text-right">
+                <img src="{{val.restaurant.featured_image}}" panelimage/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div  id="map_canvas" class="col-md-8">
+    <map id="map" scrollwheel="false" mapTypeId="google.maps.MapTypeId.TERRAIN" zoom="15"  class="form-control-rounded" style="height:600px">
+        <marker ng-repeat="val in restaurants" position="{{val.restaurant.location.latitude}},{{val.restaurant.location.longitude}}"></marker>
+    </map>
+</div>
+</div>
+</div>

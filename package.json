@@ -1,0 +1,35 @@
+{
+  "name": "angular-sample-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web.js",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "express": "^4.13.4",
+    "gzippo": "^0.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cache-control": "^0.2.5",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-targethtml": "^0.2.6"
+  },
+  "scripts": {
+    "start": "node web.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nehasoni/angular-sample-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nehasoni/angular-sample-app/issues"
+  },
+  "homepage": "https://github.com/nehasoni/angular-sample-app#readme",
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
